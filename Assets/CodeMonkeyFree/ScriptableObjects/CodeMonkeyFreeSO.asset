@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.00
   subtype: lunarLanderFree
-  lastShownTimestamp: 1767524306
+  lastShownTimestamp: 1767619348
   lastUpdateResponse:
     version: 1.00
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1767532464
+  checkedLastUpdateTimestamp: 1767619348
   lastQOTDResponse:
     questionId: 258
     questionText: Can you modify transform.forward directly to rotate a transform?
@@ -27,7 +27,7 @@ MonoBehaviour:
     answerC: 
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1767532464
+  lastQotdTimestamp: 1767619348
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/codeMonkeyToolkit50Off.png
     topText: Get my Toolkit! 40 Tools and Elements to help you make games BETTER
@@ -35,19 +35,19 @@ MonoBehaviour:
     topLink: toolkit
     bottomText: My 10+ Years of C# Knowledge in 1 Course!
     bottomLink: csharpcourse
-  lastDynamicHeaderTimestamp: 1767532464
+  lastDynamicHeaderTimestamp: 1767619348
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1767532464
+  websiteLatestMessageTimestamp: 1767619348
   websiteLatestVideos:
     videos:
+    - youTubeId: t_-jmK-qXss
+      title: Learn the MOST VALUABLE Skill Tomorrow!
     - youTubeId: -ukmK1N1QEg
       title: EVERYTHING I made in 2025!
     - youTubeId: N0ucHeJPFb4
       title: 19,606 Steam games in 2025, most made $0 BUT that's not a problem!
     - youTubeId: ZrlwMA2qaKw
       title: BEST NEW Visual Assets to INSPIRE YOU! (DECEMBER 2025)
-    - youTubeId: rtwwNG7Jwwc
-      title: Get Ready for 2026 with FREE Technical Unity ebooks and samples!
-  websiteLatestVideosTimestamp: 1767532464
+  websiteLatestVideosTimestamp: 1767619348
