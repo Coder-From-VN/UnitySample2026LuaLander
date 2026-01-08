@@ -1,7 +1,9 @@
 # Unity 2D Demo Project
 
 This is a small **Unity 2D demo project** created while following a
+
 beginner Unity 2D tutorial on YouTube.\ https://www.youtube.com/watch?v=nGKd4yTP3M8&t=18s
+
 The project is for learning and practice purposes.
 
 ## Features
