@@ -8,18 +8,23 @@ public class LandingUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI TittleTextMesh;
     [SerializeField] private TextMeshProUGUI statsTextMesh;
+    [SerializeField] private TextMeshProUGUI nextButtonTextMesh;
     [SerializeField] private Button nextButton;
+
+
+    private Action nextButtonClickAction;
 
     private void Awake()
     {
         nextButton.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene(0);
+            nextButtonClickAction();
         });
     }
 
     private void Start()
     {
+        nextButton.Select();
         Lander.Instance.OnLanded += Lander_OnLanded;
         Hide();
     }
@@ -29,10 +34,14 @@ public class LandingUI : MonoBehaviour
         if (e._landingType == Lander.LandingType.Oke)
         {
             TittleTextMesh.text = "OKE NGON";
+            nextButtonTextMesh.text = "Tiep";
+            nextButtonClickAction = GameManager.Instance.GotoNextLevel;
         }
         else
         {
             TittleTextMesh.text = "<color=#ff0000>CRASH!</color>";
+            nextButtonTextMesh.text = "Thu lai";
+            nextButtonClickAction = GameManager.Instance.ReTryLevel;
         }
         statsTextMesh.text =
             MathF.Round(e._langdingSpeed * 10f) + "\n" +

@@ -37,6 +37,7 @@ public class Lander : MonoBehaviour
 
     //coin even
     public event EventHandler OnCoinPickUp;
+    public event EventHandler OnFuelPickUp;
     //Land even
     public event EventHandler<OnLandedEvenArgs> OnLanded;
     public class OnLandedEvenArgs : EventArgs
@@ -90,7 +91,11 @@ public class Lander : MonoBehaviour
         {
             default:
             case State.WattingToStart:
-                if (Keyboard.current.spaceKey.isPressed || Keyboard.current.dKey.isPressed || Keyboard.current.aKey.isPressed)
+                if (GameInput.instance.IsUpActionPressed() ||
+                    GameInput.instance.IsRightActionPressed() ||
+                    GameInput.instance.IsLeftActionPressed() ||
+                    GameInput.instance.GetMovermentInputV2() != Vector2.zero
+                    )
                 {
                     Landerrigidbody2d.gravityScale = Garavity_Normal;
                     SetState(State.Normal);
@@ -104,22 +109,30 @@ public class Lander : MonoBehaviour
                     return;
                 }
 
-                if (Keyboard.current.spaceKey.isPressed || Keyboard.current.dKey.isPressed || Keyboard.current.aKey.isPressed)
+                if (GameInput.instance.IsUpActionPressed() ||
+                    GameInput.instance.IsRightActionPressed() ||
+                    GameInput.instance.IsLeftActionPressed() ||
+                    GameInput.instance.GetMovermentInputV2() != Vector2.zero
+                    )
                 {
                     ConSumFuel();
                 }
 
-                if (Keyboard.current.spaceKey.isPressed)
+                float gamepadDeathzone = .4f;
+                if (GameInput.instance.IsUpActionPressed() ||
+                    GameInput.instance.GetMovermentInputV2().y > gamepadDeathzone)
                 {
                     Landerrigidbody2d.AddForce(transform.up * thrust);
                     OnUpForce?.Invoke(this, EventArgs.Empty);
                 }
-                if (Keyboard.current.dKey.isPressed)
+                if (GameInput.instance.IsRightActionPressed() ||
+                    GameInput.instance.GetMovermentInputV2().x < -gamepadDeathzone)
                 {
                     Landerrigidbody2d.AddTorque(-torquePower);
                     OnLForce?.Invoke(this, EventArgs.Empty);
                 }
-                if (Keyboard.current.aKey.isPressed)
+                if (GameInput.instance.IsLeftActionPressed() ||
+                    GameInput.instance.GetMovermentInputV2().x > gamepadDeathzone)
                 {
                     Landerrigidbody2d.AddTorque(torquePower);
                     OnRForce?.Invoke(this, EventArgs.Empty);
@@ -208,6 +221,7 @@ public class Lander : MonoBehaviour
             {
                 fuelAmount = fuelAmountMax;
             }
+            OnFuelPickUp.Invoke(this, EventArgs.Empty);
             fuelPickUp.DestroySeft();
         }
 
