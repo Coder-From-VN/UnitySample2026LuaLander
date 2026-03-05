@@ -14,45 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.00
   subtype: lunarLanderFree
-  lastShownTimestamp: 1768646368
+  lastShownTimestamp: 1772611831
   lastUpdateResponse:
     version: 1.00
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1768646369
+  checkedLastUpdateTimestamp: 1772611832
   lastQOTDResponse:
-    questionId: 262
-    questionText: 'What will be the value of isOne?
-
-      <p>float oneThird = 1f
-      / 3f;</p>
-
-      <p>bool isOne = (oneThird * 3f) == 1f;</p>'
-    answerA: true
-    answerB: false
-    answerC: 
-    answerD: 
+    questionId: 278
+    questionText: How should you store the health of each unit in your game?
+    answerA: public int health;
+    answerB: private int health;
+    answerC: public static int health;
+    answerD: private int h;
     answerE: 
-  lastQotdTimestamp: 1768646369
+  lastQotdTimestamp: 1772611832
   lastDynamicHeaderResponse:
-    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/codeMonkeyToolkit50Off.png
-    topText: Get my Toolkit! 40 Tools and Elements to help you make games BETTER
-      and FASTER!
-    topLink: toolkit
+    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/gameDevReport_2.png
+    topText: Stay up to date with the latest in Game Dev straight to your inbox!
+    topLink: gamedevreport
     bottomText: My 10+ Years of C# Knowledge in 1 Course!
     bottomLink: csharpcourse
-  lastDynamicHeaderTimestamp: 1768646369
+  lastDynamicHeaderTimestamp: 1772611832
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1768646369
+  websiteLatestMessageTimestamp: 1772611832
   websiteLatestVideos:
     videos:
-    - youTubeId: cWKA_FTprj0
-      title: TOP 10 NEW Games, Made with Unity! (DECEMBER 2025)
-    - youTubeId: mJk727yG7qw
-      title: Tips from making 2-3-4 Games!
-    - youTubeId: Jgw5Z40Q1vc
-      title: Learn Problem Solving (FREE Course, MOST VALUABLE skill)
-    - youTubeId: t_-jmK-qXss
-      title: Learn the MOST VALUABLE Skill Tomorrow!
-  websiteLatestVideosTimestamp: 1768646369
+    - youTubeId: uNNz1kOsLVw
+      title: Steam's 30% Cut Isn't Even the Biggest Problem!
+    - youTubeId: XShVX_PBi1o
+      title: BEST NEW Visual Assets to INSPIRE YOU! (FEBRUARY 2026)
+    - youTubeId: RXf1jsXxWkg
+      title: Learn how to write PRO level code with this DEEP DIVE!
+    - youTubeId: Lm_YTrn9KYc
+      title: Unity HDRP is DEAD!
+  websiteLatestVideosTimestamp: 1772611832
